@@ -11,6 +11,7 @@ screen = pygame.display.set_mode(size)
 while True:
     # registrar eventos en la ventana
     for event in pygame.event.get():
+        print(event)
         if event.type == pygame.QUIT:
             sys.exit()
 
