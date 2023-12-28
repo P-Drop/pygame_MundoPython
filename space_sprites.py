@@ -16,11 +16,19 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.y = 600
         self.rect.x = 400
+        self.speed_x = 0
+        self.speed_y = 0
+
+    def changespeed(self, x):
+        self.speed_x += x
     
     def update(self):
+        self.rect.x += self.speed_x
+        """
         pos_x = pygame.mouse.get_pos()[0]
         if pos_x <= 620:
             self.rect.x = pos_x
+        """
 
 class Laser(pygame.sprite.Sprite):
     def __init__(self) -> None:
