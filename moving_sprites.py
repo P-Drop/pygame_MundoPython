@@ -58,7 +58,7 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
 
-    all_sprite_list.update()
+    player.update()
 
     moneda_hit_list = pygame.sprite.spritecollide(player, monedas_list, True)
 
